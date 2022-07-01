@@ -1,0 +1,111 @@
+.relatedProducts {
+  max-width: 102.4rem;
+  // box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.02);
+  margin: 8rem auto;
+
+  @include response(tablet) {
+    width: 550px;
+    padding: 1rem 2rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: $col-1;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  &__products {
+    display: grid;
+    // flex-wrap: wrap;
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    // justify-content: space-between;
+    padding: 0 1rem;
+    gap: 1rem;
+    @include response(tablet) {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+    }
+    // overflow: hidden;
+  }
+
+  &__product {
+    width: 30rem;
+    box-shadow: 0 2rem 3rem 2rem rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+
+    @include response(tablet) {
+      width: 40rem;
+    }
+  }
+
+  &__img {
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include response(tablet) {
+      width: 40rem;
+    }
+    // overflow: hidden;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    padding: 3rem 1rem;
+    align-items: center;
+  }
+
+  &__address,
+  &__city,
+  &__title,
+  &__rating {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-transform: capitalize;
+    color: $col-2;
+    display: block;
+    padding-left: 1rem;
+    font-weight: 500;
+  }
+
+  &__price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1rem 0;
+  }
+  &__item2 {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    // margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  &__btn {
+    border: 0;
+    display: block;
+    font-size: 1.4rem;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    background-color: $col-1;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+
+  &__noPost {
+    padding: 5rem 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}

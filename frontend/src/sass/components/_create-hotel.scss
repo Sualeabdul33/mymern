@@ -1,0 +1,70 @@
+.product {
+  &__heading {
+    font-size: 2rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  &__form {
+    max-width: 50rem;
+    height: auto;
+    margin: 1rem auto;
+    padding: 2rem;
+    background-color: #e9ecef;
+    // border-radius: 1rem;
+    box-shadow: 0rem 1.2rem 3rem 1rem rgba(0, 0, 0, 0.02);
+    border-radius: 1rem;
+  }
+  &__input {
+    width: 90%;
+    margin: 1rem auto;
+    display: block;
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.4rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    width: 90%;
+    font-size: 1.8rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: $col-2;
+    color: #fff;
+    display: block;
+    transition: all 0.3s;
+    border-radius: 0.4rem;
+
+    cursor: pointer;
+    &:hover {
+      background-color: #a29999;
+    }
+  }
+
+  &__photo {
+    display: none;
+  }
+
+  &__create {
+    display: block;
+    padding: 1.2rem 3rem;
+    text-align: center;
+    font-size: 1.9rem;
+    margin: 2rem 1rem;
+    border: 0;
+    background-color: $col-1;
+    cursor: pointer;
+    transition: all 0.3s;
+    // border-radius: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: #358d3c;
+    }
+  }
+}

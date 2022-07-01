@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  background-color: $col-1;
+  height: 10rem;
+  color: $text;
+
+  @include response(tablet) {
+    width: 550px !important;
+    overflow: hidden !important;
+  }
+
+  &__main {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

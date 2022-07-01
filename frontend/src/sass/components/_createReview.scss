@@ -1,0 +1,54 @@
+.review {
+  background-color: #f8f9fa;
+  padding: 3rem 1rem;
+
+  &__form {
+    width: 30rem;
+    margin: 3rem auto;
+    background-color: #e9ecef;
+    padding: 2rem 1rem;
+    box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.04);
+  }
+
+  &__heading {
+    font-size: 1.7rem;
+    font-weight: 500;
+    // padding: 1rem;
+    // margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 80%;
+    display: block;
+    border: 0;
+    border-bottom: solid 0.2rem#b197fc;
+    transition: all 0.4s;
+    background-color: #e9ecef;
+
+    &:focus {
+      outline: 0;
+      border-bottom: solid 0.2rem #0ca678;
+      width: 90%;
+    }
+  }
+
+  &__btn {
+    border: 0;
+    background-color: $col-1;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    margin: 2rem 0;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #fff;
+    s &:hover {
+      background-color: #b197fc;
+    }
+  }
+}

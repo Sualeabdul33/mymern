@@ -1,0 +1,126 @@
+.navbar {
+  width: 100%;
+  background-color: $col-1;
+  padding: 3rem 0;
+  color: $text;
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+
+  @include response(tab) {
+    width: 900px !important;
+    overflow: hidden;
+  }
+  @include response(tablet) {
+    width: 550px !important;
+  }
+  // @include response(phone) {
+  //   width: 365px !important;
+  // }
+  &__top {
+    max-width: 102.2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include response(tablet) {
+      width: 550px !important;
+      overflow: hidden;
+    }
+
+    // @include response(phone) {
+    //   justify-content: space-around;
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      color: #ddf;
+    }
+    @include response(tab) {
+    }
+    @include response(tablet) {
+      font-size: 1.4rem;
+      margin: 1rem 0.5rem;
+    }
+  }
+
+  &__search-box {
+    // border: solid 1px blue;
+    padding: 1rem 0;
+    width: 70%;
+    margin: 0rem auto;
+    background-color: $col-2;
+    border-radius: 1rem;
+    position: fixed;
+    top: 12rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3000;
+
+    @include response(tab) {
+      max-width: 900px !important;
+    }
+
+    @include response(tablet) {
+      max-width: 550px;
+      margin: 0;
+      background-color: transparent;
+      transform: translate(-50%, -50%) !important;
+      left: 30rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  &__input {
+    padding: 2rem 1rem;
+    width: 90%;
+    outline: 0;
+    border: 0;
+    border-radius: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @include response(tablet) {
+      background-color: #dde;
+    }
+
+    @include response(tab) {
+      width: 80%;
+    }
+  }
+
+  &__btn {
+    width: 20%;
+    border-radius: 1rem;
+    background: $col-1;
+    font-size: 1.8rem;
+    border: 0;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

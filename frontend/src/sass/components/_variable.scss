@@ -1,0 +1,26 @@
+$col-1: #087f5b;
+$col-2: #343a40;
+$text: #333;
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == tablet) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tab) {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == laptop) {
+    @media (min-width: 180rem) {
+      @content;
+    }
+  }
+  @if ($breakpoint == phone) {
+    @media (min-width: 375px) {
+      @content;
+    }
+  }
+}

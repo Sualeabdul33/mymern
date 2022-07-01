@@ -1,0 +1,117 @@
+.myProducts {
+  width: 102.4rem;
+
+  margin: 8rem auto;
+  //   background-color: $col-2;
+
+  @include response(tablet) {
+    width: 550px;
+  }
+
+  @include response(tab) {
+    width: 900px;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: $col-1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    padding: 0 1rem;
+    gap: 1rem;
+
+    @include response(tab) {
+      grid-template-columns: repeat(2, minmax(30rem, 1fr));
+    }
+    @include response(tablet) {
+      flex-direction: column;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+    }
+  }
+
+  &__product {
+    // position: relative;
+    width: 30rem;
+    box-shadow: 0 2rem 4rem 2rem rgba(0, 0, 0, 0.08);
+
+    border-radius: 1rem;
+
+    @include response(tablet) {
+      margin: 2rem 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__img {
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  &__item {
+    padding: 2rem 1rem;
+  }
+  &__city,
+  &__price,
+  &__rating,
+  &__title {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    text-transform: capitalize;
+    color: $col-2;
+    display: block;
+    padding-left: 1rem;
+    font-weight: 500;
+  }
+  &__price {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  &__item2 {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__btn {
+    border: 0;
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    background-color: $col-1;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  &__noPost {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+}

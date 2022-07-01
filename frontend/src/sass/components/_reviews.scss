@@ -1,0 +1,134 @@
+.reviews {
+  width: 102.4rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  @include response(tablet) {
+    width: 550px;
+    padding: 1rem 2rem;
+  }
+  @include response(tab) {
+    width: 900px;
+    margin: 2rem 0.5rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__review {
+    box-shadow: 0 0.5rem 2rem 0.6rem rgba(0, 0, 0, 0.09);
+    margin: 2rem 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
+    @include response(tablet) {
+      margin: 2rem 1rem;
+    }
+    @include response(tab) {
+      margin: 2rem 1rem;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr) auto;
+    align-items: center;
+    border-bottom: 2px solid #e9ecef;
+
+    @include response(tablet) {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem auto;
+    }
+    @include response(tab) {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem auto;
+    }
+  }
+  &__img {
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+
+    @include response(tab) {
+      margin: 4rem 0.5rem;
+    }
+  }
+
+  &__name,
+  &__date,
+  &__rating {
+    display: block;
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+    font-weight: 600;
+    color: $col-1;
+  }
+
+  &__delete,
+  &__like {
+    font-size: 2rem;
+
+    cursor: pointer;
+  }
+  &__delete {
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__like {
+    color: $col-1;
+  }
+
+  &__like {
+    color: $col-1;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: #36a840;
+    }
+  }
+
+  &__text {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  &__highlighted {
+    background-color: $col-1;
+    padding: 0.4rem 0.9rem;
+    margin: 0 0.5rem;
+    color: #fff;
+    border-radius: 100px;
+    transform: skewX(35deg);
+  }
+
+  &__noReviews {
+    padding: 7rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  &__noRating {
+    color: #777;
+  }
+
+  &__diff {
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+}
